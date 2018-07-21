@@ -9,6 +9,11 @@
 
 <script type="text/javascript">
   $(function(){
-    $('')
+    $('#js-next-link').click(function(){
+      const id = $(this).data('id')
+      $.getJSON('/products/' + id + '/data', function(data){
+        
+      })
+    })
   })
 </script>
