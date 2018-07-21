@@ -9,11 +9,11 @@ class ProductsController < ApplicationController
 
   def inventory
     product = P
-  end 
+  end
 
   def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
+    set_product
+    render json: ProductSerializer.serialize(@product)
   end
 
   def new
@@ -33,5 +33,5 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
-  end 
+  end
 end
