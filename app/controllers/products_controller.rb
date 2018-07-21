@@ -11,6 +11,11 @@ class ProductsController < ApplicationController
     set_product
     render plain: @product.inventory > 0
   end
+  
+  def description
+    set_product
+    render plain: @product.description
+  end
 
   def data
     set_product
