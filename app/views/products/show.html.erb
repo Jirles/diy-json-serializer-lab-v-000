@@ -14,7 +14,7 @@
       $.getJSON('/products/' + id + '/data', function(data){
         $('#productName').text(data["name"])
         $('#productDescription').text(data["description"])
-        $('#productPrice').text(data["price"])
+        $('#productPrice').text("Price: " + data["price"])
         $('#productInventory').text(data["inventory"])
       })
     })
