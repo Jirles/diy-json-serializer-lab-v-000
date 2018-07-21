@@ -12,7 +12,10 @@
     $('#js-next-link').click(function(){
       const id = $(this).data('id')
       $.getJSON('/products/' + id + '/data', function(data){
-        
+        $('#productName').text(data["name"])
+        $('#productDescription').text(data["description"])
+        $('#productPrice').text(data["price"])
+        $('#productInventory').text(data["inventory"])
       })
     })
   })
