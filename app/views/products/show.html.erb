@@ -16,7 +16,7 @@
         $('#productDescription').text(data["description"])
         $('#productPrice').text("Price: " + data["price"])
         $('#productInventory').text("Inventory: " + data["inventory"])
-        $()
+        $('#js-next-link').attr('data-id', data["id"])
       })
     })
   })
