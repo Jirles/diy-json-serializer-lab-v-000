@@ -9,7 +9,7 @@
 $(function() {
   $(".js-more").on("click", function() {
     var id = $(this).data("id");
-    $.get("/products/" + id + "/data", function(data) {
+    $.getJSON("/products/" + id + "/data", function(data) {
         var inventoryText = "<strong>Available</strong>";
         if(parseInt(data["inventory"], 10) === 0){
           inventoryText = "<strong>Sold Out</strong>";
