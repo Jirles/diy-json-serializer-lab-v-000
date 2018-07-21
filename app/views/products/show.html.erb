@@ -5,7 +5,10 @@
   <li id="productInventory">Inventory: <%= @product.inventory%></li>
 </ul>
 
-<a href="#" data-id="<%= @product.id %>">Next Product</a>
+<a href="#" id="js-next-link" data-id="<%= @product.id %>">Next Product</a>
 
 <script type="text/javascript">
+  $(function(){
+    $('')
+  })
 </script>
