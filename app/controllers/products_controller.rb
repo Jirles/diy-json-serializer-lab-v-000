@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
 
   def inventory
     set_product
+    render plain: @product.inventory > 0
   end
 
   def data
