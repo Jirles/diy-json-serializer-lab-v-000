@@ -10,12 +10,13 @@
 <script type="text/javascript">
   $(function(){
     $('#js-next-link').click(function(){
-      const id = $(this).data('id')
+      const id = parseInt($(this).data('id'), 10) + 1
       $.getJSON('/products/' + id + '/data', function(data){
         $('#productName').text(data["name"])
         $('#productDescription').text(data["description"])
         $('#productPrice').text("Price: " + data["price"])
         $('#productInventory').text("Inventory: " + data["inventory"])
+        $()
       })
     })
   })
